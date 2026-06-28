@@ -3,7 +3,7 @@ from fastapi import FastAPI
 app = FastAPI()
 
 @app.get("/")
-async def home():
+async def root():
     return {
-        "status":"ok"
+        "status":"ok from fatapi"
     }
