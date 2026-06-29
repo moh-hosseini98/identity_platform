@@ -5,6 +5,8 @@ services:
       dockerfile: Dockerfile
     container_name: fastapi-app
     restart: always
+    environment:
+      DB_ASYNC_CONNECTION_STR: ${DB_ASYNC_CONNECTION_STR}
     expose:
       - "8000"
     depends_on:
@@ -27,6 +29,8 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
+    networks:
+      - backend
 
   nginx:
     build:

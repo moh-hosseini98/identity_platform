@@ -5,7 +5,7 @@ from functools import lru_cache
 class Settings(BaseSettings):
 
     db_async_connection_str : str
-    model_config = SettingsConfigDict(env_file="../.env")
+    model_config = SettingsConfigDict(env_file=".env",extra="ignore")
     
 
 
