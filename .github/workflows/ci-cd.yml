@@ -21,8 +21,8 @@ jobs:
 
       - name: Build and push image
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/fastapi-book-project:${{ github.sha }} .
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/fastapi-book-project:${{ github.sha }}
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/fastapi-todo-app:${{ github.sha }} .
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/fastapi-todo-app:${{ github.sha }}
 
   deploy:
     runs-on: self-hosted
