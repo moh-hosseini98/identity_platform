@@ -19,3 +19,14 @@ class RetrieveTodoResponse(BaseModel):
     content: str
     created_at: datetime
     updated_at: datetime
+
+class ListTodosResponseItem(BaseModel):
+    id: int
+    content: str
+    created_at: datetime
+    updated_at: datetime
+
+
+class ListTodosResponse(BaseModel):
+    count: int
+    items: list[ListTodosResponseItem]
