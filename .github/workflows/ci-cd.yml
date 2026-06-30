@@ -32,7 +32,7 @@ jobs:
         working-directory: /home/mohammad/identity_platform
     steps:
         - name: Deploy
-          run:
+          run: |
             export IMAGE_TAG=${{ github.sha }}
             docker compose pull
             docker compose up -d
