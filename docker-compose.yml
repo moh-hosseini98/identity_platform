@@ -9,8 +9,6 @@ services:
       DB_ASYNC_CONNECTION_STR: ${DB_ASYNC_CONNECTION_STR}
     expose:
       - "8000"
-    volumes:
-      - .:/app
     depends_on:
       - db
     networks:
