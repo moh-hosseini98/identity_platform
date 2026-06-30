@@ -1,8 +1,6 @@
 services:
   app:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: mohhosseini1998/fastapi-todo-app:${IMAGE_TAG} 
     container_name: fastapi-app
     restart: always
     environment:
