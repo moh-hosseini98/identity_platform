@@ -34,6 +34,7 @@ jobs:
         - name: Deploy
           run: |
             export IMAGE_TAG=${{ github.sha }}
+            git pull origin main
             docker compose pull
             docker compose up -d
             docker image prune -f
