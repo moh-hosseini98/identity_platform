@@ -28,4 +28,4 @@ app.include_router(v1_router)
 
 @app.get("/health", tags=["Health"])
 async def health():
-    return {"status": "ok (edited V3)"}
+    return {"status": "ok (test for ci cd in production)"}
